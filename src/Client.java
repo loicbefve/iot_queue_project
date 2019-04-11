@@ -1,6 +1,6 @@
 public class Client {
-    protected double tempsArrivee;
-    protected double dureeService;
+    private double tempsArrivee;
+    private double dureeService;
 
     public Client(double arrivalTime, double serviceTime){
         this.tempsArrivee = arrivalTime;

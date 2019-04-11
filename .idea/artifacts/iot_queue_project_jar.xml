@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="iot_queue_project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/iot_queue_project_jar</output-path>
+    <root id="archive" name="iot_queue_project.jar">
+      <element id="module-output" name="iot_queue_project" />
+    </root>
+  </artifact>
+</component>

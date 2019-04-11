@@ -1,5 +1,5 @@
 
-public class MM1Simulation {
+public class MD1Simulation {
     double lambda;
     double mu;
     ListeEvents liste;
@@ -7,7 +7,7 @@ public class MM1Simulation {
     double t;
 
 
-    public MM1Simulation(double lambda, double mu) {
+    public MD1Simulation(double lambda, double mu) {
         this.lambda = lambda;
         this.mu = mu;
         q = new Queue();
@@ -20,7 +20,7 @@ public class MM1Simulation {
 
     public double simulate(double simLength) {
 
-       //Variable pour temps moyen:
+        //Variable pour temps moyen:
         int nb_client = 0;
         double waiting_time = 0.;
         int n_event = 1;
@@ -94,6 +94,7 @@ public class MM1Simulation {
             }
 
         }
+
         double ro = lambda/mu;
 
         System.out.println("\n\nDébut de la simulation M/M/1: mu=" + this.mu + ", lambda =" + this.lambda + ",tsim =" + simLength);
@@ -101,14 +102,14 @@ public class MM1Simulation {
         System.out.println("Fin de la simulation...");
         System.out.println(nb_client + " clients ont été traités");
         System.out.println("Le temps moyen d'attente est de:" + waiting_time/nb_client);
-        System.out.println("Le temps théorique d'attente devrait être:" + 1/(mu - lambda));
+        System.out.println("Le temps théorique d'attente devrait être:" + ((mu/(1-ro)) - (mu*ro/(2*(1-ro)))) );
         System.out.println("Le nombre moyen de clients est de:" + n_event/simLength);
-        System.out.println("Le temps théorique d'attente devrait être:" + ro/(1 - ro));
+        System.out.println("Le nombre moyen de clients théorique devrait être:" + (((2*ro)-(ro*ro))/(2*(1 - ro))));
 
-
+//       System.out.println(waiting_time/nb_client);
 //        System.out.println(n_event/simLength);
-//        double ro = lambda/mu;
-//        System.out.println(ro/(1-ro));
+
+//        System.out.println(((2*ro) - (ro*ro))/(2*(1-ro)));
 //        System.out.println("\n");
 
 
